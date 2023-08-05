@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: ${mysql.url}
+    url: ${mysql.url.test}
     username: ${mysql.username}
     password: ${mysql.password}
   profiles:
@@ -13,3 +13,12 @@ spring:
 logging:
   level:
     com.seungh1024: debug
+    org.springframework.jdbc: debug
+    com.seungh1024.repository.mybatis: trace
+
+# MyBatis
+mybatis:
+  type-aliases-package: com.seungh1024.domain
+  configuration:
+    map-underscore-to-camel-case: true
+#  mapper-locations: classpath:mapper/**/*.xml

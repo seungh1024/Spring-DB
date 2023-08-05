@@ -1,5 +1,9 @@
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'
-    runtimeOnly 'mysql:mysql-connector-java'
+    runtimeOnly 'mysql:mysql-connector-java:8.0.23'
+
+    //MyBatis 추가
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.2'
+//    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.2'
 }

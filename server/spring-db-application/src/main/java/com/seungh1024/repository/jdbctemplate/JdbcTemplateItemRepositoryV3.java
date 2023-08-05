@@ -85,17 +85,22 @@ public class JdbcTemplateItemRepositoryV3 implements ItemRepository {
 
         BeanPropertySqlParameterSource param = new BeanPropertySqlParameterSource(cond);
 
-        String sql = "select id, item_name as itemName, price, quantity from item";
+        String sql = "select id, item_name , price, quantity from item";
         //동적 쿼리
         if(StringUtils.hasText(itemName) || maxPrice != null){
             sql+=" where";
         }
 
+        boolean andFlag = false;
         if(StringUtils.hasText(itemName)){
             sql += " item_name like concat('%',:itemName,'%')";
+            andFlag = true;
         }
 
         if(maxPrice != null){
+            if(andFlag){
+                sql += " and";
+            }
             sql += " price <= :maxPrice";
         }
         log.info("sql={}", sql);
