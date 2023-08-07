@@ -16,6 +16,8 @@ logging:
     com.seungh1024: debug
     org.springframework.jdbc: debug
     com.seungh1024.repository.mybatis: trace
+    org.hibernate.sql: debug
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
 
 # MyBatis
 mybatis:

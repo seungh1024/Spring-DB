@@ -1,5 +1,6 @@
 package com.seungh1024.domain;
 
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -7,12 +8,18 @@ import java.util.Objects;
 
 @Getter
 @Setter
+@Entity
 public class Item {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name ="item_name", length = 10)
     private String itemName;
+    @Column(name = "price")
     private Integer price;
+    @Column(name = "quantity")
     private Integer quantity;
 
     public Item(){}
