@@ -1,6 +1,7 @@
 package com.seungh1024.service;
 
 import com.seungh1024.domain.Item;
+import com.seungh1024.domain.jpa.SpringDataJpaItemRepository;
 import com.seungh1024.repository.ItemRepository;
 import com.seungh1024.repository.ItemSearchCond;
 import com.seungh1024.repository.ItemUpdateDto;

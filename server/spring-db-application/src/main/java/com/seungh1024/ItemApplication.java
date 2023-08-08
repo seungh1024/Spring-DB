@@ -20,7 +20,8 @@ import javax.sql.DataSource;
 @Slf4j
 //@Import(JdbcTemplateV3Config.class)
 //@Import(MyBatisConfig.class)
-@Import(JpaConfig.class)
+//@Import(JpaConfig.class)
+@Import(SpringDataJpaConfig.class)
 @SpringBootApplication(scanBasePackages ={"com.seungh1024.controller","com.seungh1024.env"})
 public class ItemApplication {
     public static void main(String[] args) {
