@@ -22,7 +22,8 @@ import javax.sql.DataSource;
 //@Import(MyBatisConfig.class)
 //@Import(JpaConfig.class)
 //@Import(SpringDataJpaConfig.class)
-@Import(QuerydslConfig.class)
+//@Import(QuerydslConfig.class)
+@Import(V2Config.class)
 @SpringBootApplication(scanBasePackages ={"com.seungh1024.controller","com.seungh1024.env"})
 public class ItemApplication {
     public static void main(String[] args) {
