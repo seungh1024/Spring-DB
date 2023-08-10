@@ -1,0 +1,36 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${mysql.url}
+    username: ${mysql.username}
+    password: ${mysql.password}
+
+  profiles:
+    active: local
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+logging:
+  level:
+    com.seungh1024: debug
+    org.springframework.jdbc: debug
+    com.seungh1024.repository.mybatis: trace
+    org.hibernate.SQL: debug
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+    org.springframework.transaction.interceptor: trace
+    org.springframework.jdbc.datasource.DataSourceTransactionManager: debug
+    org.springframework.orm.jpa.JpaTransactionManager: debug
+    org.hibernate.resource.transaction: debug
+
+# MyBatis
+mybatis:
+  type-aliases-package: com.seungh1024.domain.
+  configuration:
+    map-underscore-to-camel-case: true
+#  mapper-locations: classpath:mapper/**/*.xml
+
